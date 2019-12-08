@@ -1,6 +1,6 @@
 ## New design upcoming..
 
-[BattleCryWoW Project: Join on Discord](https://discord.gg/XMPtjTE) To watch the progress and interract with the developer.
+[BattleCryWoW Project: join on Discord](https://discord.gg/XMPtjTE) to keep track of the progress and interract with the developer.
 
 ## Trinity Item Creator (Up to date)
 | Current Status | Issues Open | Current Version | Commits Since | New Downloads |
