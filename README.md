@@ -1,7 +1,7 @@
-## Trinity Item Creator
-| Current Status | Issues Open | Current Version | Commits Since | New Downloads |
+## ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/TrinityItemCreator/TrinityItemCreator?color=lime&label=Trinity%20Item%20Creator)
+| Current Status | Issues Open | Current Version | Latest Release | New Downloads |
 | ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
-| [![Build Status](https://travis-ci.com/TrinityItemCreator/TrinityItemCreator.svg?branch=master)](https://travis-ci.com/TrinityItemCreator/TrinityItemCreator) | [![GitHub issues](https://img.shields.io/github/issues/TrinityItemCreator/TrinityItemCreator.svg)](https://github.com/TrinityItemCreator/TrinityItemCreator/issues?q=is%3Aopen+is%3Aissue) | ![GitHub release](https://img.shields.io/github/release/TrinityItemCreator/TrinityItemCreator.svg) | ![GitHub commits (since latest release)](https://img.shields.io/github/commits-since/TrinityItemCreator/TrinityItemCreator/latest.svg) | [![Github All Releases](https://img.shields.io/github/downloads/TrinityItemCreator/TrinityItemCreator/latest/total.svg)](https://github.com/TrinityItemCreator/TrinityItemCreator/releases) |
+| ![Travis (.org) branch](https://img.shields.io/travis/TrinityItemCreator/TrinityItemCreator/master?color=lime&style=for-the-badge) | ![GitHub issues](https://img.shields.io/github/issues-raw/TrinityItemCreator/TrinityItemCreator?style=for-the-badge) | ![GitHub release (latest by date)](https://img.shields.io/github/v/release/TrinityItemCreator/TrinityItemCreator?label=Version&style=for-the-badge) | ![GitHub Release Date](https://img.shields.io/github/release-date/TrinityItemCreator/TrinityItemCreator?label=Latest%20Release&logo=travis&style=for-the-badge) | ![GitHub All Releases](https://img.shields.io/github/downloads/TrinityItemCreator/TrinityItemCreator/total?label=Total%20Downloads&style=for-the-badge) |
 
 ### Functionality
 - [x] Import to database
