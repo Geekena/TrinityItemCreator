@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrinityItemCreator.MyClass;
 
@@ -88,11 +90,17 @@ namespace TrinityItemCreator.Dialog_Forms
             TextBoxDB.Text = Properties.Settings.Default.db_name;
         }
 
-        private void Form_DB_Info_FormClosed(object sender, FormClosedEventArgs e)
+        private async void Form_DB_Info_FormClosed(object sender, FormClosedEventArgs e)
         {
-            string dbConnection = "Database Connection: ";
-            mainForm.LabelDBConnection.Text = dbConnection + (Functions.IsDBConnected() ? "Yes" : "None");
-            mainForm.LabelDBConnection.ForeColor = Functions.IsDBConnected() ? Color.LimeGreen : Color.IndianRed;
+            await Task.Run(() => CheckDatabaseConnection(2500));
+
+            mainForm.UpdateDBConnectionLabel(mainForm.dbstatus);
+        }
+
+        private void CheckDatabaseConnection(int sleepTime)
+        {
+            mainForm.dbstatus = Functions.IsDBConnected();
+            Thread.Sleep(sleepTime);
         }
     }
 }

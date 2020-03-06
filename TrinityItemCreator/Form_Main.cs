@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrinityItemCreator.Dialog_Forms;
 using TrinityItemCreator.MyClass;
@@ -30,6 +32,7 @@ namespace TrinityItemCreator
 
         private bool mouseDown;
         private Point lastLocation;
+        public bool dbstatus;
 
         private void Form1_Shown(object sender, EventArgs e)
         {
@@ -788,7 +791,7 @@ namespace TrinityItemCreator
             MyData.Field_ammo_type = Convert.ToInt32(s.Remove(s.IndexOf(']')).Substring(s.IndexOf('[') + 1));
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_LoadAsync(object sender, EventArgs e)
         {
             Functions myF = new Functions(this);
             myF.DelayMainFormPainting();
@@ -800,14 +803,34 @@ namespace TrinityItemCreator
             if (!Functions.preLoadTemplate)
                 myF.LoadDefaultTemplate(99999);
 
-            string dbConnection = "Database Connection: ";
-            LabelDBConnection.Text = dbConnection + (Functions.IsDBConnected() ? "Yes" : "None");
-            LabelDBConnection.ForeColor = Functions.IsDBConnected() ? Color.LimeGreen : Color.IndianRed;
+            LabelDBConnection.Text = "Checking database connection..";
+            await Task.Run(() => CheckDatabaseConnection(2500));
+            UpdateDBConnectionLabel(dbstatus);
 
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
             string version = fvi.FileVersion;
             label15.Text += $" Version {version}";
+        }
+
+        private void CheckDatabaseConnection(int sleepTime)
+        {
+            dbstatus = Functions.IsDBConnected();
+            Thread.Sleep(sleepTime);
+        }
+
+        public void UpdateDBConnectionLabel(bool available)
+        {
+            if (available)
+            {
+                LabelDBConnection.Text = "Database Connection OK!";
+                LabelDBConnection.ForeColor = Color.LimeGreen;
+            }
+            else
+            {
+                LabelDBConnection.Text = "No Database Connection!";
+                LabelDBConnection.ForeColor = Color.IndianRed;
+            }
         }
 
         private void SaveCurrentTemplateToolStripMenuItem_Click(object sender, EventArgs e)

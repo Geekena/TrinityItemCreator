@@ -2494,9 +2494,9 @@
             // 
             this.LabelDBConnection.BackColor = System.Drawing.Color.Transparent;
             this.LabelDBConnection.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.LabelDBConnection.Location = new System.Drawing.Point(911, 36);
+            this.LabelDBConnection.Location = new System.Drawing.Point(879, 36);
             this.LabelDBConnection.Name = "LabelDBConnection";
-            this.LabelDBConnection.Size = new System.Drawing.Size(194, 31);
+            this.LabelDBConnection.Size = new System.Drawing.Size(226, 31);
             this.LabelDBConnection.TabIndex = 206;
             this.LabelDBConnection.Text = "Database Connection: Fail";
             this.LabelDBConnection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3834,7 +3834,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form1_LoadAsync);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
