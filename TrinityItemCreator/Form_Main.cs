@@ -183,7 +183,7 @@ namespace TrinityItemCreator
                 "Application developer: [artister.hd@gmail.com]\n"
                 +"\n"
                 +"CONTRIBUTORS:\n \n"
-                + " Sdyees (Code Cleanup), Freddan962 (Item.dbc Converter)"
+                + " Sdyees (Code Cleanup), Freddan962 (Item.dbc Converter), Cyber Mist (Code Fixes)"
                 );
         }
 
