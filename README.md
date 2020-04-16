@@ -1,3 +1,9 @@
+```diff
+! Looking for developers
++ Requiring implementation for Item Tooltip Preview
++ Requiring implementation for 3D Model Viewer
+```
+
 ## ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/TrinityItemCreator/TrinityItemCreator?color=lime&label=Trinity%20Item%20Creator)
 | Current Status | Issues Open | Current Version | Latest Release | Guest Downloads |
 | ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
