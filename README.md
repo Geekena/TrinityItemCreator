@@ -1,4 +1,8 @@
 ```diff
+! This application is not compatible with MySQL 8.0
+```
+
+```diff
 ! Looking for developers
 + Requiring implementation for Item Tooltip Preview
 + Requiring implementation for 3D Model Viewer
